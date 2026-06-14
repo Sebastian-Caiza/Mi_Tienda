@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mitienda.AdminController">
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="200.0" spacing="8.0" BorderPane.alignment="TOP_CENTER">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" text="🏠 Inicio" />
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" text="📦 Productos" />
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" text="🏷️ Categorías" />
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" text="👥 Clientes" />
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" text="🛒 Ventas" />
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" text="📊 Reportes" />
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" text="👤 Usuarios" />
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" text="🚪 Cerrar Sesión" />
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="700.0" spacing="10.0" BorderPane.alignment="TOP_CENTER">
+         <children>
+            <Label text="Productos" />
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox prefHeight="550.0" prefWidth="550.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Registro  /  Edición de Producto" />
+            <GridPane hgap="10.0" vgap="10.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+               </rowConstraints>
+               <children>
+                  <Label text="Código del Producto" />
+                  <Label text="Nombre del Producto" GridPane.columnIndex="1" />
+                  <Label text="Categoría" GridPane.columnIndex="2" />
+                  <TextField fx:id="txtCodigo" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtNombre" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="cmbCategoria" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label text="Precio" GridPane.rowIndex="2" />
+                  <Label text="Stock" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Estado" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtPrecio" GridPane.rowIndex="3" />
+                  <TextField fx:id="txtStock" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="cmbEstado" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+            <HBox spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnNuevo" text="+ Nuevo" />
+                  <Button mnemonicParsing="false" onAction="#btnGuardar" text="💾 Guardar" />
+                  <Button mnemonicParsing="false" onAction="#btnActualizar" text="✏️ Actualizar" />
+                  <Button mnemonicParsing="false" onAction="#btnEliminar" text="🗑️ Eliminar" />
+                  <Button mnemonicParsing="false" onAction="#btnLimpiar" text="🔄 Limpiar" />
+               </children>
+            </HBox>
+            <TableView fx:id="tablaProductos" prefHeight="300.0" prefWidth="550.0">
+               <columns>
+                  <TableColumn fx:id="colCodigo" prefWidth="80.0" text="Código" />
+                  <TableColumn fx:id="colNombre" prefWidth="100.0" text="Nombre" />
+                  <TableColumn fx:id="colCategoria" prefWidth="80.0" text="Categoría" />
+                  <TableColumn fx:id="colPrecio" prefWidth="70.0" text="Precio" />
+                  <TableColumn fx:id="colStock" prefWidth="70.0" text="Stock" />
+                  <TableColumn fx:id="colEstado" prefWidth="80.0" text="Estado" />
+                  <TableColumn fx:id="colAcciones" prefWidth="80.0" text="Acciones" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
