@@ -1,8 +1,7 @@
 # MiTienda - Sistema de Ventas
 
 ## Descripción
-MiTienda es un sistema de ventas de escritorio desarrollado en JavaFX. 
-Permite gestionar productos mediante un panel administrativo con 
+MiTienda es un sistema de ventas de escritorio desarrollado en JavaFX que permite gestionar productos mediante un panel administrativo con 
 autenticación de usuarios por rol.
 
 ## Tecnologías utilizadas
